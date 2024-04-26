@@ -1,46 +1,78 @@
-# Personal-Carbon-Calculator
-Python app that uses streamlit to calculate the Carbon Footprint. 
+# Personal Carbon Calculator
 
+This Python app uses Streamlit to calculate the Carbon Footprint.
 
+## Setup Instructions
 
+### Step 1: Install Python
 
-### SETUP INSTRUCTIONS: 
+Download and install the appropriate Python installer for your operating system:
+- [Python Downloads](https://www.python.org/downloads/)
 
-## Download python installer.
-This depends on your operating system(whether it is x32 or x64).
+### Step 2: Install Visual Studio Code (Optional)
 
-# Download vscode, then install it.
-This also depends on whether your system operating system  is x32 or x64 (whether it is x32 or x64).
+Download and install Visual Studio Code, a code editor that supports Python development:
+- [Visual Studio Code](https://code.visualstudio.com/)
 
+### Step 3: Install pip
 
-# Install pip:
+Install pip, the Python package installer, by running the following command in your terminal or command prompt:
+
 pip install pip --user
 
 
 
-# Install Streamlit:
-py -m pip install streamlit 
+### Step 4: Install Streamlit
 
-OR
+Install Streamlit, the Python library used to create the web app, by running the following command:
 
- Open your cmd administrator, then, pip install streamlit
+pip install streamlit
 
 
-# Install Requirements.txt:
+Alternatively, you can open your terminal or command prompt as an administrator and run:
+
+
+pip install streamlit
+
+
+### Step 5: Install Dependencies
+
+Install the required Python dependencies listed in the `requirements.txt` file:
+
 pip install -r requirements.txt
 
 
-### To create the python environment:
- python -m venv world 
-
-Note: world is the name of the virtual environment that needs to be created, then you need to activate the environment.
-
-## To activate the environment:
-
-# 
-./activate
 
 
-## RUN THE STREAMLIT APP:
+### Step 6: Create Python Environment (Optional)
+
+If you prefer, you can create a virtual environment using venv. Run the following command to create a virtual environment named "world":
+
+python -m venv world
+
+
+
+
+
+Activate the virtual environment by running:
+- On Windows: `world\Scripts\activate`
+- On macOS/Linux: `source world/bin/activate`
+
+## Running the Streamlit App
+
+To run the Streamlit app, execute the following command in your terminal or command prompt:
+
 streamlit run app.py
-"# business_carbon_calculator" 
+
+## Project Structure
+
+Personal-Carbon-Calculator/
+│
+├── app.py # Streamlit app code
+├── requirements.txt # List of Python dependencies
+├── README.md # Project documentation
+├── images/ # Directory for images used in the app
+│ ├── king.jpg
+│ ├── queen.jpg
+│ └── pawn.jpg
+└── venv/ # Directory for Python virtual environment (created by venv)
