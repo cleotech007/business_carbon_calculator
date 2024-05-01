@@ -6,7 +6,7 @@ import pandas as pd  # read csv, df manipulation
 import streamlit as st  # 🎈 data web app development
 
 st.set_page_config(
-    page_title="Real-Time Dashboard",
+    page_title="CLEO TECH CARBON OFFSET",
     page_icon="✅",
     layout="wide",
 )
@@ -38,25 +38,6 @@ def calculate_emissions(event_type, event_data):
         total_emissions += event_data["mobile"] * EMISSION_FACTORS["Mobile Device"]
     
     return total_emissions
-
-#  4: Streamlit App Setup
-st.title("Event Carbon Emissions Calculator")
-
-
-st.divider()
-st.divider()
-
-
-st.image("images/king.jpg", caption="Rimba Raya Biodiversity Reserve")
-st.divider()
-st.divider()
-
-st.image("images/queen.jpg", caption="Eden Reforestation")
-st.divider()
-st.divider()
-
-
-st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recycling")
 
 
 
@@ -161,7 +142,7 @@ for seconds in range(200):
         
         kpi3.metric(
             label="Time Spent on PC",
-            value=f"$ {round(timespentonpc,2)} ",
+            value=f"£ {round(timespentonpc,2)} ",
             delta=-round(timespentonpc / count_public) * 100,
         )
 
@@ -179,9 +160,33 @@ for seconds in range(200):
         #     fig2 = px.histogram(data_frame=df, x="internetdailyhour_new")
         #     st.write(fig2)
 
-        st.markdown("### Detailed Data View")
-        st.dataframe(df)
-        time.sleep(1)
+        #  4: Streamlit App Setup
+
+
+
+
+st.title("CLEO TECH CARBON OFFSET PROGRAM")
+
+
+st.divider()
+st.divider()
+
+
+st.image("images/king.jpg", caption="Rimba Raya Biodiversity Reserve")
+st.divider()
+st.divider()
+
+st.image("images/queen.jpg", caption="Eden Reforestation")
+st.divider()
+st.divider()
+
+
+st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recycling")
+
+
+st.markdown("### Detailed Data View")
+st.dataframe(df)
+time.sleep(1)
 
 
 
