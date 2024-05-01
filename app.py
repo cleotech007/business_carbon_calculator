@@ -42,6 +42,24 @@ def calculate_emissions(event_type, event_data):
 #  4: Streamlit App Setup
 st.title("Event Carbon Emissions Calculator")
 
+
+st.divider()
+st.divider()
+
+
+st.image("images/king.jpg", caption="Rimba Raya Biodiversity Reserve")
+st.divider()
+st.divider()
+
+st.image("images/queen.jpg", caption="Eden Reforestation")
+st.divider()
+st.divider()
+
+
+st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recycling")
+
+
+
 event_type = st.radio("Select Event Type", ("Physical", "Virtual"))
 
 #  5: User Input Handling
@@ -166,37 +184,6 @@ for seconds in range(200):
         time.sleep(1)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-st.divider()
-st.divider()
-
-
-st.image("images/king.jpg", caption="Rimba Raya Biodiversity Reserve")
-st.divider()
-st.divider()
-
-st.image("images/queen.jpg", caption="Eden Reforestation")
-st.divider()
-st.divider()
-
-
-st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recycling")
 
 
 
