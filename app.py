@@ -24,6 +24,13 @@ EMISSION_FACTORS = {
 }
 
 st.title("EVENT CARBON CALCULATOR")
+st.markdown("## Educational Resources")
+st.write("Welcome to Cleo Tech Carbon Offset Program! Below are some educational resources to help you understand carbon offsetting and make informed choices:")
+
+st.write("- **What is Carbon Offset?**: Carbon offsetting involves compensating for carbon dioxide emissions by investing in projects that reduce or remove carbon from the atmosphere.")
+st.write("- **Types of Offset Projects**: There are various types of offset projects such as reforestation, renewable energy, and methane capture. Each type has its own environmental benefits.")
+st.write("- **Maximizing Your Contribution**: You can maximize your contribution to sustainability by choosing projects with high environmental integrity and verifying their impact through reputable certification programs.")
+
 
 def calculate_emissions(event_type, event_data):
     total_emissions = 0
