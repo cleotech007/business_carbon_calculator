@@ -185,7 +185,6 @@ st.divider()
 
 st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recycling")
 
-st.title("CLEO TECH DATA VIEW")
 st.markdown("### This is the data that is used in the real time tracking")
 st.dataframe(df)
 time.sleep(1)
