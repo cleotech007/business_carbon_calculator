@@ -5,6 +5,8 @@ import pandas as pd  # read csv, df manipulation
 # import plotly.express as px  # interactive charts
 import streamlit as st  # 🎈 data web app development
 
+st.title("CLEO TECH CARBON CALCULATOR")
+
 st.set_page_config(
     page_title="CLEO TECH CARBON OFFSET",
     page_icon="✅",
@@ -183,8 +185,8 @@ st.divider()
 
 st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recycling")
 
-
-st.markdown("### Detailed Data View")
+st.title("CLEO TECH DATA VIEW")
+st.markdown("### This is the data that is used in the real time tracking")
 st.dataframe(df)
 time.sleep(1)
 
