@@ -5,7 +5,6 @@ import pandas as pd  # read csv, df manipulation
 # import plotly.express as px  # interactive charts
 import streamlit as st  # 🎈 data web app development
 
-st.title("CLEO TECH CARBON CALCULATOR")
 
 st.set_page_config(
     page_title="CLEO TECH CARBON OFFSET",
@@ -23,6 +22,8 @@ EMISSION_FACTORS = {
     "Accommodation": 5,  # kg CO2 per night
     "Commute": {"Public Transport": 2.8, "Private Vehicle": 2.4},  # kg CO2 per km
 }
+
+st.title("CLEO TECH CARBON CALCULATOR")
 
 def calculate_emissions(event_type, event_data):
     total_emissions = 0
