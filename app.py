@@ -89,8 +89,102 @@ st.divider()
 st.subheader("Total Carbon Emissions")
 st.write(f"Total emissions: {total_emissions:.2f} kg CO2e")
 
-# Real-time Tracking
-# st._EXPERIMENTAL_QUERY_PARAMS_DEPRECATE_MSG()
+
+
+dataset_url = "https://raw.githubusercontent.com/toluwashekoni007/business_carbon_calculator/main/Carbon%20Emission.csv"
+
+@st.experimental_memo
+def get_data() -> pd.DataFrame:
+    return pd.read_csv(dataset_url)
+
+df = get_data()
+
+sex_filter = st.selectbox("Select the Gender", pd.unique(df["sex"]))
+
+placeholder = st.empty()
+
+df = df[df["sex"] == sex_filter]
+
+for seconds in range(200):
+
+    df["internetdailyhour_new"] = df["internetdailyhour"] * np.random.choice(range(1, 5))
+    df["timespentonpc_new"] = df["timespentonpc"] * np.random.choice(range(1, 5))
+
+    # creating KPIs
+    avg_internetdailyhour = np.mean(df["internetdailyhour_new"])
+
+    count_public = int(
+        df[(df["transport"] == "public")]["transport"].count()
+        + np.random.choice(range(1, 30))
+    )
+
+
+
+    timespentonpc = np.mean(df["timespentonpc_new"])
+
+
+
+
+
+
+    with placeholder.container():
+
+        # create three columns
+        kpi1, kpi2, kpi3 = st.columns(3)
+
+        # fill in those three columns with respective metrics or KPIs
+        kpi1.metric(
+            label="Internet Use Daily",
+            value=round(avg_internetdailyhour),
+            delta=round(avg_internetdailyhour) - 10,
+        )
+        
+        kpi2.metric(
+            label="Transport",
+            value=int(count_public),
+            delta=-10 + count_public,
+        )
+        
+        kpi3.metric(
+            label="Time Spent on PC",
+            value=f"$ {round(timespentonpc,2)} ",
+            delta=-round(timespentonpc / count_public) * 100,
+        )
+
+        # create two columns for charts
+        fig_col1, fig_col2 = st.columns(2)
+        with fig_col1:
+            st.markdown("### First Chart")
+            fig = px.density_heatmap(
+                data_frame=df, y="internetdailyhour_new", x="transport"
+            )
+            st.write(fig)
+            
+        with fig_col2:
+            st.markdown("### Second Chart")
+            fig2 = px.histogram(data_frame=df, x="internetdailyhour_new")
+            st.write(fig2)
+
+        st.markdown("### Detailed Data View")
+        st.dataframe(df)
+        time.sleep(1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 st.divider()
@@ -107,6 +201,19 @@ st.divider()
 
 
 st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recycling")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
