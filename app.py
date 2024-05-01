@@ -7,7 +7,7 @@ import streamlit as st  # 🎈 data web app development
 
 
 st.set_page_config(
-    page_title="EVENT CARBON OFFSET",
+    page_title="CLEO TECH CARBON OFFSET CALCULATOR",
     page_icon="✅",
     layout="wide",
 )
@@ -23,7 +23,7 @@ EMISSION_FACTORS = {
     "Commute": {"Public Transport": 2.8, "Private Vehicle": 2.4},  # kg CO2 per km
 }
 
-st.title("CLEO TECH CARBON CALCULATOR")
+st.title("EVENT CARBON CALCULATOR")
 
 def calculate_emissions(event_type, event_data):
     total_emissions = 0
@@ -168,7 +168,7 @@ for seconds in range(200):
 
 
 
-st.title("CLEO TECH CARBON OFFSET PROGRAM")
+st.markdown ("## CLEO TECH CARBON OFFSET PROGRAM")
 
 
 st.divider()
@@ -186,9 +186,12 @@ st.divider()
 
 st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recycling")
 
-st.markdown("### This is the data that is used in the real time tracking")
+st.divider()
+
 st.dataframe(df)
 time.sleep(1)
+st.markdown("This is the data that is used in the real time tracking")
+
 
 
 
