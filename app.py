@@ -10,7 +10,6 @@ st.set_page_config(
     page_icon="✅",
     layout="wide",
 )
-
 EMISSION_FACTORS = {
     "Air Travel": 0.254,  # kg CO2 per passenger-km
     "Car Travel": 0.164,  # kg CO2 per km
