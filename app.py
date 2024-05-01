@@ -122,14 +122,14 @@ for seconds in range(200):
 
 
 
-
-
-
     with placeholder.container():
 
         # create three columns
         kpi1, kpi2, kpi3 = st.columns(3)
 
+        st.divider()
+        st.divider()
+        st.divider()
         # fill in those three columns with respective metrics or KPIs
         kpi1.metric(
             label="Internet Use Daily",
