@@ -1,6 +1,3 @@
-
-
-
 import streamlit as st
 import time  # to simulate a real time data, time loop
 import numpy as np  # np mean, np random
