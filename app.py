@@ -12,15 +12,15 @@ st.set_page_config(
     layout="wide",
 )
 EMISSION_FACTORS = {
-    "Air Travel": 0.13,  # kg CO2 per passenger-km (Domes)
-    "Car Travel": 0.164,  # kg CO2 per km
-    "Electricity": 0.20707,  # kg CO2 per kWh
-    "Internet": 0.00268,  # kg CO2 per MB
-    "Server": 0.00031,  # kg CO2 per MB
+    "Air Travel": 0.13,  # kg CO2 per passenger-km in the United Kingdom (Domes)
+    "Car Travel": 0.16496,  # kg CO2 per km in the United Kingdom
+    "Electricity": 0.01792,  # kg CO2 per kWh in the United Kingdom
+    "Internet": 0.00268,  # kg CO2 per MB in the United Kingdom
+    "Server": 0.87671232876,  # kg CO2 per MB in the United Kingdom
     "Personal Computer": 0.233,  # kg CO2 per hour
-    "Mobile Device": 0.00005,  # kg CO2 per hour
-    "Accommodation": 5,  # kg CO2 per night
-    "Commute": {"Public Transport": 2.8, "Private Vehicle": 2.4},  # kg CO2 per km
+    "Mobile Device": 0.16438,  # kg CO2 per hour
+    "Accommodation": 10.4,  # kg CO2 per night
+    "Commute": {"Public Transport": 0.083, "Private Vehicle": 0.050},  # kg CO2 per km
 }
 
 st.title("EVENT CARBON CALCULATOR")
@@ -242,3 +242,5 @@ Remember, every little bit helps in building a greener future! By offsetting you
 st.write(carbon_offset_text)
 st.write(offset_projects_text)
 st.write(maximize_contribution_text)
+
+
