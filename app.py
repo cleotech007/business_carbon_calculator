@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide",
 )
 EMISSION_FACTORS = {
-    "Air Travel": 0.254,  # kg CO2 per passenger-km
+    "Air Travel": 0.13,  # kg CO2 per passenger-km (Domes)
     "Car Travel": 0.164,  # kg CO2 per km
     "Electricity": 0.20707,  # kg CO2 per kWh
     "Internet": 0.00268,  # kg CO2 per MB
@@ -231,16 +231,13 @@ Each project type has its own set of environmental perks and helps tackle differ
 """
 
 maximize_contribution_text = """
-### Making Your Impact Count
-Want to make the most out of your sustainability efforts with carbon offsetting? Check out these tips:
+### Here are some tips to help you do just that:
 
-- **Choose Wisely**: Pick projects with solid environmental credentials and transparent reporting. Look for certifications like the Verified Carbon Standard (VCS) to ensure your investment has a real impact.
-- **Go Local**: Consider supporting offset projects in your community to address local environmental issues and boost sustainable development.
-- **Know Your Carbon Footprint**: Figure out your carbon footprint to see where you can cut back on emissions through lifestyle changes and energy efficiency.
-- **Offset as a Last Resort**: While carbon offsetting is awesome, it's even better to focus on reducing emissions first. So, try to cut back on energy use, choose eco-friendly transportation, and reduce waste before turning to offsetting.
-
-Remember, every little bit helps in building a greener future! By offsetting your carbon footprint and backing carbon offset projects, you're playing a crucial role in fighting climate change and safeguarding our planet for generations to come.
-"""
+- **Pick Wisely**: Choose projects that have solid green credentials and are upfront about what they're doing. Keep an eye out for certifications like the Verified Carbon Standard (VCS) to make sure your investment is doing some real good.
+- **Keep It Local**: Think about getting involved with offset projects right in your own backyard. Not only does this help tackle local environmental issues, but it also boosts the sustainable vibe of your community.
+- **Know Your Footprint**: Take a second to figure out just how much carbon you're kicking out. It'll give you a heads-up on where you can cut back with little lifestyle tweaks and energy-saving tricks.
+- **Last Resort Offset**: While offsetting is cool, it's even cooler to cut down on emissions first. So, try to use less energy, go for eco-friendly transport, and trim down waste before you hit the offset button.
+Remember, every little bit helps in building a greener future! By offsetting your carbon footprint and getting behind carbon offset projects, you're doing your part to fight climate change and keep our planet awesome for the next crew."""
 
 st.write(carbon_offset_text)
 st.write(offset_projects_text)
