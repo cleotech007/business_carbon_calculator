@@ -24,12 +24,6 @@ EMISSION_FACTORS = {
 }
 
 st.title("EVENT CARBON CALCULATOR")
-st.markdown("## Educational Resources")
-st.write("Welcome to Cleo Tech Carbon Offset Program! Below are some educational resources to help you understand carbon offsetting and make informed choices:")
-
-st.write("- **What is Carbon Offset?**: Carbon offsetting involves compensating for carbon dioxide emissions by investing in projects that reduce or remove carbon from the atmosphere.")
-st.write("- **Types of Offset Projects**: There are various types of offset projects such as reforestation, renewable energy, and methane capture. Each type has its own environmental benefits.")
-st.write("- **Maximizing Your Contribution**: You can maximize your contribution to sustainability by choosing projects with high environmental integrity and verifying their impact through reputable certification programs.")
 
 
 def calculate_emissions(event_type, event_data):
@@ -94,6 +88,12 @@ st.divider()
 st.subheader("Total Carbon Emissions")
 st.write(f"Total emissions: {total_emissions:.2f} kg CO2e")
 
+st.divider()
+st.divider()
+st.divider()
+
+
+st.markdown("# REAL TIME TRACKING")
 
 
 dataset_url = "https://raw.githubusercontent.com/toluwashekoni007/business_carbon_calculator/main/Carbon%20Emission.csv"
@@ -175,10 +175,17 @@ for seconds in range(200):
 
 
 
-st.markdown ("## CLEO TECH CARBON OFFSET PROGRAM")
 
+
+st.dataframe(df)
+time.sleep(1)
+st.markdown("This is the data that is used in the real time tracking")
 
 st.divider()
+st.divider()
+
+st.markdown ("## CLEO TECH CARBON OFFSET PROGRAM")
+
 st.divider()
 
 
@@ -195,23 +202,25 @@ st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recy
 
 st.divider()
 
-st.dataframe(df)
-time.sleep(1)
-st.markdown("This is the data that is used in the real time tracking")
 
+st.markdown("## Educational Resources")
 
+intro_text = """
+The Python code given creates a streamlined web application for computing carbon emissions connected with various sorts of events, classified as "Physical" and "Virtual". The programme allows users to enter event-specific characteristics and estimates total carbon emissions using predefined emission factors. 
+The offered Python code aims to provide a user-friendly web application that streamlines the process of estimating carbon emissions for various sorts of events. The goal is to construct an easy interface that allows users to enter relevant data and generate carbon emission estimates using Streamlit, a Python package for building interactive web apps. 
 
+The development of the carbon calculator application involves several key steps:
+1. Importing Libraries: The code begins by importing the essential library, namely Streamlit, which is used to develop the web application. 
+2. Defining Emission Factors: A dictionary named 'EMISSION_FACTORS' has predefined emission factors for various event components. These variables contain figures for power use, internet usage, transportation, lodging, and others.
+3. Calculating Emissions: A function called 'calculate_emissions' is built to compute total carbon emissions depending on user input and predefined emission factors. The function takes into account elements such as air trip distance, vehicle travel distance, lodging, commuting method, power use, and more. 
+"""
 
+st.write(intro_text)
 
-
-
-
-
-
-
-
-
-
+st.write("- **Streamlit App Setup**: The main Streamlit application is configured, including a title and subheader for selecting the event type (physical or virtual).")
+st.write("- **User Input Handling**: Depending on the event type, the programme dynamically updates the input fields. Users may provide information about physical events such as trip distances, lodging details, mode of transportation, and number of participants. Inputs for virtual events include electrical consumption and emissions from the internet, servers, personal computers, and mobile devices.")
+st.write("- **Emissions Calculation**: The 'calculate_emissions' function calculates total carbon emissions based on user inputs.")
+st.write("- **Displaying Results**: The user is shown the overall emissions as well as a breakdown of emission causes. The application also offers photographs and details of environmental projects to promote awareness about carbon offset activities.")
 
 
 
