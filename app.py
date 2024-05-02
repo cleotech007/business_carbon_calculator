@@ -203,26 +203,45 @@ st.image("images/pawn.jpg", caption="Second Life Ocean Plastic Recovery and Recy
 st.divider()
 
 
+# 8: Educational Resources
 st.markdown("## Educational Resources")
 
 intro_text = """
-The Python code given creates a streamlined web application for computing carbon emissions connected with various sorts of events, classified as "Physical" and "Virtual". The programme allows users to enter event-specific characteristics and estimates total carbon emissions using predefined emission factors. 
-The offered Python code aims to provide a user-friendly web application that streamlines the process of estimating carbon emissions for various sorts of events. The goal is to construct an easy interface that allows users to enter relevant data and generate carbon emission estimates using Streamlit, a Python package for building interactive web apps. 
-
-The development of the carbon calculator application involves several key steps:
-1. Importing Libraries: The code begins by importing the essential library, namely Streamlit, which is used to develop the web application. 
-2. Defining Emission Factors: A dictionary named 'EMISSION_FACTORS' has predefined emission factors for various event components. These variables contain figures for power use, internet usage, transportation, lodging, and others.
-3. Calculating Emissions: A function called 'calculate_emissions' is built to compute total carbon emissions depending on user input and predefined emission factors. The function takes into account elements such as air trip distance, vehicle travel distance, lodging, commuting method, power use, and more. 
+Hey there! Welcome to Cleo Tech's Carbon Offset Program! Below, we've got some handy info to help you wrap your head around carbon offsetting and make some smart choices.
 """
 
 st.write(intro_text)
 
-st.write("- **Streamlit App Setup**: The main Streamlit application is configured, including a title and subheader for selecting the event type (physical or virtual).")
-st.write("- **User Input Handling**: Depending on the event type, the programme dynamically updates the input fields. Users may provide information about physical events such as trip distances, lodging details, mode of transportation, and number of participants. Inputs for virtual events include electrical consumption and emissions from the internet, servers, personal computers, and mobile devices.")
-st.write("- **Emissions Calculation**: The 'calculate_emissions' function calculates total carbon emissions based on user inputs.")
-st.write("- **Displaying Results**: The user is shown the overall emissions as well as a breakdown of emission causes. The application also offers photographs and details of environmental projects to promote awareness about carbon offset activities.")
+carbon_offset_text = """
+### What's Carbon Offset All About?
+Ever heard of carbon offsetting? It's a cool way to balance out the carbon dioxide emissions from activities like travel, energy use, and manufacturing. Here's how it works: you invest in projects that either reduce or remove carbon from the atmosphere. These projects can be anything from planting trees to capturing methane emissions.
 
+Carbon offset projects come in two flavors: there are ones that focus on cutting down emissions (like renewable energy projects), and others that trap carbon dioxide to keep it out of the air (like reforestation).
+"""
 
+offset_projects_text = """
+### Check Out These Offset Projects
+We've got a variety of offset projects aimed at fighting climate change and promoting sustainability:
 
+- **Eden Reforestation**: Think planting trees and restoring forests to soak up CO2 and boost biodiversity.
+- **Second Life Ocean Plastic Recovery and Recycling**: Get excited about recycling of plastic that is potentially harmful to sealife.
+- **Rimba Raya Biodiversity Reserve**: The Rimba Raya Biodiversity Reserve protects 91,215 hectares of rich, tropical peat swamp forests which are monitored by local rangers.
 
+Each project type has its own set of environmental perks and helps tackle different aspects of climate change and ecosystem health.
+"""
 
+maximize_contribution_text = """
+### Making Your Impact Count
+Want to make the most out of your sustainability efforts with carbon offsetting? Check out these tips:
+
+- **Choose Wisely**: Pick projects with solid environmental credentials and transparent reporting. Look for certifications like the Verified Carbon Standard (VCS) to ensure your investment has a real impact.
+- **Go Local**: Consider supporting offset projects in your community to address local environmental issues and boost sustainable development.
+- **Know Your Carbon Footprint**: Figure out your carbon footprint to see where you can cut back on emissions through lifestyle changes and energy efficiency.
+- **Offset as a Last Resort**: While carbon offsetting is awesome, it's even better to focus on reducing emissions first. So, try to cut back on energy use, choose eco-friendly transportation, and reduce waste before turning to offsetting.
+
+Remember, every little bit helps in building a greener future! By offsetting your carbon footprint and backing carbon offset projects, you're playing a crucial role in fighting climate change and safeguarding our planet for generations to come.
+"""
+
+st.write(carbon_offset_text)
+st.write(offset_projects_text)
+st.write(maximize_contribution_text)
